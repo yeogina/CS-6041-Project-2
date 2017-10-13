@@ -12,7 +12,9 @@ $(document).ready(function() {
         {
             if(isPositiveInteger(simDelayParam))
             {
-                
+                console.log("input string: \"" + inputStringParam + "\"");
+                console.log("stack symbol: " + stackSymbolParam);
+                console.log("simulation delay: " + simDelayParam + " ms.");
             }
             else
             {
