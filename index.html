@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CS 6041 - Project 2</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--
+        ********************************************************************
+                                css files
+        ********************************************************************
+        -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+        <!--
+        ********************************************************************
+                                header section
+        ********************************************************************
+        -->
+        <header class="container">
+            <div class="row">
+                <div class="col-12 mt-3">
+                    <h2 class="title">CS 6041 Theory of Computation - Project 2</h2>
+                </div>
+            </div>
+        </header>
+
+        <!--
+        ********************************************************************
+                                pda's language
+        ********************************************************************
+        -->
+        <section class="container">
+            <div class="row">
+                <div class="col-12 mt-3">
+                    <p class="text-center">
+                        L(M) = { 0<sup>n</sup> 1<sup>n</sup> }<br>
+                        This machine accepts n number of 0's followed by n number of 1's.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--
+        ********************************************************************
+                                simulation parameters
+        ********************************************************************
+        -->
+        <section class="container">
+            <div class="row align-items-center">
+
+                <!-- input string -->
+                <div class="col-12 col-md-4 mt-3">
+                    <div class="form-group">
+                        <label for="inputStringParam">Input String</label>
+                        <input type="text" class="form-control" id="inputStringParam">
+                    </div>
+                </div>
+
+                <!-- stack symbol -->
+                <div class="col-12 col-md-4 mt-3">
+                    <div class="form-group">
+                        <label for="stackSymbolParam">Stack Symbol</label>
+                        <select class="form-control custom-select" id="stackSymbolParam">
+                            <option value="dollar" selected>&#36;</option>
+                            <option value="euro">&euro;</option>
+                            <option value="yen">&yen;</option>
+                            <option value="won">&#8361;</option>
+                            <option value="heart">&#10084;</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- simulation delay -->
+                <div class="col-12 col-md-4 mt-3">
+                    <div class="form-group">
+                        <label for="simDelayParam">Simulation Delay (ms)</label>
+                        <input type="text" class="form-control" id="simDelayParam" value="2000">
+                    </div>
+                </div>
+
+                <!-- run simulation -->
+                <div class="col-12 col-md-4 mx-md-auto">
+                    <button type="button" class="btn btn-outline-primary btn-block" id="runSimBTN">Run Simulation</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!--
+        ********************************************************************
+                                error modal window
+        ********************************************************************
+        -->
+        <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="errorModalLabel" class="modal-title">
+                            <span class="red-color"><i class="fa fa-times-circle" aria-hidden="true"></i></span> Error
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+        ********************************************************************
+                                js files
+        ********************************************************************
+        -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
